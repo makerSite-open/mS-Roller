@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--Velocio Factory 1.0-->
+<!--www.VelocioNetworks.com-->
+<VelocioNetworks>
+  <elementPageTag sAddress="vFactoryPage" sIndex="" dtAddress="UI16" bWholeArray="False" />
+  <Page Name="Home">
+    <Label height="1" width="4" x="18" y="1" myLableType="Label" sRecipe="" align="left" myColor="black" sText="Speed M2" />
+    <Label height="1" width="4" x="4" y="1" myLableType="Label" sRecipe="" align="left" myColor="black" sText="Speed M1" />
+    <Slider height="1" width="8" x="1" y="3">
+      <eValue sAddress="M1speed" sIndex="" dtAddress="UI16" bWholeArray="False" />
+      <eMin sAddress="0" sIndex="" dtAddress="UI16" bWholeArray="False" />
+      <eMax sAddress="1000" sIndex="" dtAddress="UI16" bWholeArray="False" />
+    </Slider>
+    <Slider height="1" width="8" x="16" y="3">
+      <eValue sAddress="M2speed" sIndex="" dtAddress="UI16" bWholeArray="False" />
+      <eMin sAddress="0" sIndex="" dtAddress="UI16" bWholeArray="False" />
+      <eMax sAddress="1000" sIndex="" dtAddress="UI16" bWholeArray="False" />
+    </Slider>
+    <Radio height="5" width="5" x="11" y="7">
+      <eRadio sAddress="CarState" sIndex="" dtAddress="I32" bWholeArray="False" />
+      <value sAddress="0" sIndex="" dtAddress="I32" bWholeArray="False" />
+      <label text="Stop" />
+      <value sAddress="1" sIndex="" dtAddress="I32" bWholeArray="False" />
+      <label text="Foward" />
+      <value sAddress="2" sIndex="" dtAddress="I32" bWholeArray="False" />
+      <label text="Backward" />
+      <value sAddress="3" sIndex="" dtAddress="I32" bWholeArray="False" />
+      <label text="Letft" />
+      <value sAddress="4" sIndex="" dtAddress="I32" bWholeArray="False" />
+      <label text="Right" />
+    </Radio>
+  </Page>
+</VelocioNetworks>
