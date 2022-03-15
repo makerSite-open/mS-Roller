@@ -28,44 +28,36 @@
   </SubroutineInputs>
   <Cells>
     <start rung="0" row="2" column="3" cellsHeigh="-1" iSortedIndex="-1" />
-    <PWM rung="0" row="10" column="2" cellsHeigh="-1" iSortedIndex="1" myPWMType="SetPeriod" iDevice="0">
+    <PWM rung="0" row="10" column="2" cellsHeigh="-1" iSortedIndex="0" myPWMType="SetPeriod" iDevice="0">
       <ePeriod sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
       <bContinuous value="True" />
     </PWM>
-    <PWM rung="0" row="14" column="2" cellsHeigh="-1" iSortedIndex="2" myPWMType="Start" iDevice="0">
+    <PWM rung="0" row="14" column="2" cellsHeigh="-1" iSortedIndex="1" myPWMType="Start" iDevice="0">
       <eOutput sAddress="M1PWM" sIndex="" dtAddress="Bit" />
       <eOnTime sAddress="M1speed" sIndex="" dtAddress="UI16" />
       <bContinuous value="True" />
     </PWM>
-    <coilSet rung="0" row="22" column="8" cellsHeigh="-1" iSortedIndex="4">
+    <coilSet rung="0" row="22" column="8" cellsHeigh="-1" iSortedIndex="3">
       <eAddress1 sAddress="M1a" sIndex="" dtAddress="Bit" />
     </coilSet>
-    <coilReset rung="0" row="22" column="12" cellsHeigh="-1" iSortedIndex="5">
+    <coilReset rung="0" row="22" column="12" cellsHeigh="-1" iSortedIndex="4">
       <eAddress1 sAddress="M1b" sIndex="" dtAddress="Bit" />
     </coilReset>
-    <coilReset rung="0" row="22" column="16" cellsHeigh="-1" iSortedIndex="6">
+    <coilReset rung="0" row="22" column="16" cellsHeigh="-1" iSortedIndex="5">
       <eAddress1 sAddress="M2a" sIndex="" dtAddress="Bit" />
     </coilReset>
-    <coilSet rung="0" row="22" column="20" cellsHeigh="-1" iSortedIndex="7">
+    <coilSet rung="0" row="22" column="20" cellsHeigh="-1" iSortedIndex="6">
       <eAddress1 sAddress="M2b" sIndex="" dtAddress="Bit" />
     </coilSet>
-    <coilReturn rung="0" row="26" column="25" cellsHeigh="-1" iSortedIndex="8" />
-    <PWM rung="0" row="18" column="2" cellsHeigh="-1" iSortedIndex="3" myPWMType="Start" iDevice="0">
+    <coilReturn rung="0" row="26" column="25" cellsHeigh="-1" iSortedIndex="7" />
+    <PWM rung="0" row="18" column="2" cellsHeigh="-1" iSortedIndex="2" myPWMType="Start" iDevice="0">
       <eOutput sAddress="M2PWM" sIndex="" dtAddress="Bit" />
       <eOnTime sAddress="M2speed" sIndex="" dtAddress="UI16" />
       <bContinuous value="True" />
     </PWM>
-    <coilCopy rung="0" row="6" column="2" cellsHeigh="3" iSortedIndex="0" CopyType="standard">
-      <eKeySource sAddress="1000" sIndex="" dtAddress="UI16" />
-      <eKeySource sAddress="500" sIndex="" dtAddress="UI16" />
-      <eKeySource sAddress="500" sIndex="" dtAddress="UI16" />
-      <eKeyDestination sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
-      <eKeyDestination sAddress="M1speed" sIndex="" dtAddress="UI16" />
-      <eKeyDestination sAddress="M2speed" sIndex="" dtAddress="UI16" />
-    </coilCopy>
   </Cells>
   <FlowConnections>
-    <FlowConn From="0" Yes="9" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="0" Yes="1" dirYesFrom="down" dirYesTo="up" />
     <FlowConn From="1" Yes="2" dirYesFrom="down" dirYesTo="up" />
     <FlowConn From="2" Yes="8" dirYesFrom="down" dirYesTo="up" />
     <FlowConn From="3" Yes="4" dirYesFrom="right" dirYesTo="left" />
@@ -73,7 +65,6 @@
     <FlowConn From="5" Yes="6" dirYesFrom="right" dirYesTo="left" />
     <FlowConn From="6" Yes="7" dirYesFrom="right" dirYesTo="up" />
     <FlowConn From="8" Yes="3" dirYesFrom="down" dirYesTo="left" />
-    <FlowConn From="9" Yes="1" dirYesFrom="down" dirYesTo="up" />
   </FlowConnections>
   <Wires />
   <Comments />

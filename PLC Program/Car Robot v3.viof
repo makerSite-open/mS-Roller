@@ -31,11 +31,15 @@
   <SubroutineInputs cellsHeigh="0" />
   <Cells>
     <start rung="0" row="4" column="3" cellsHeigh="-1" iSortedIndex="-1" />
-    <coilCopy rung="0" row="8" column="2" cellsHeigh="3" iSortedIndex="0" CopyType="standard">
+    <coilCopy rung="0" row="8" column="2" cellsHeigh="5" iSortedIndex="0" CopyType="standard">
       <eKeySource sAddress="1" sIndex="" dtAddress="I32" />
+      <eKeySource sAddress="1000" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="1000" sIndex="" dtAddress="UI16" />
       <eKeySource sAddress="1000" sIndex="" dtAddress="UI16" />
       <eKeyDestination sAddress="CarState" sIndex="" dtAddress="I32" />
       <eKeyDestination sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="M1speed" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="M2speed" sIndex="" dtAddress="UI16" />
     </coilCopy>
     <Equal rung="0" row="16" column="3" cellsHeigh="-1" iSortedIndex="1">
       <eAddress1 sAddress="0" sIndex="" dtAddress="UI8" />
@@ -74,7 +78,7 @@
     <NC rung="0" row="22" column="12" cellsHeigh="-1" iSortedIndex="10">
       <eAddress1 sAddress="S5" sIndex="" dtAddress="Bit" />
     </NC>
-    <coilSubroutine rung="0" row="20" column="21" cellsHeigh="7" iSortedIndex="13" SubroutineName="subCentering.viofs" bIsEmbeddedSub="false">
+    <coilSubroutine rung="0" row="20" column="21" cellsHeigh="9" iSortedIndex="13" SubroutineName="subCentering.viofs" bIsEmbeddedSub="false">
       <eLocal sAddress="S2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="S2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
@@ -107,6 +111,9 @@
       <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="OutBitD5" sIndex="" dtAddress="Bit" />
       <eSub sAddress="M2b" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
+      <eSub sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
       <bPassByRefOrFromEmbedded value="True" />
     </coilSubroutine>
     <coilSubroutine rung="0" row="28" column="21" cellsHeigh="7" iSortedIndex="11" SubroutineName="subTurnR.viofs" bIsEmbeddedSub="false">
