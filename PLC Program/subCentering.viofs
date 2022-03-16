@@ -8,13 +8,13 @@
     <Connection sKey="S3" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="M1PWMpin" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="M2PWMpin" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="M1speed" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
-    <Connection sKey="M2speed" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="M1speed" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="M2speed" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
     <Connection sKey="M1a" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="M1b" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="M2a" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="M2b" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="PWMperiod" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PWMperiod" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
     <Connection sKey="S4" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="Frequency" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
     <Connection sKey="pullPin1" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
@@ -23,13 +23,10 @@
     <Connection sKey="dirPin2" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
   </Connections>
   <Modbus />
-  <SubroutineInputs cellsHeigh="4">
+  <SubroutineInputs cellsHeigh="3">
     <Input sAddress="S2" sIndex="" dtAddress="Bit" />
     <Input sAddress="S3" sIndex="" dtAddress="Bit" />
     <Input sAddress="S4" sIndex="" dtAddress="Bit" />
-    <Input sAddress="M1speed" sIndex="" dtAddress="UI16" />
-    <Input sAddress="M2speed" sIndex="" dtAddress="UI16" />
-    <Input sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
     <Input sAddress="Frequency" sIndex="" dtAddress="I32" />
     <Input sAddress="pullPin1" sIndex="" dtAddress="Bit" />
     <Input sAddress="pullPin2" sIndex="" dtAddress="Bit" />
@@ -47,33 +44,15 @@
     <NC rung="0" row="11" column="10" cellsHeigh="-1" iSortedIndex="2">
       <eAddress1 sAddress="S4" sIndex="" dtAddress="Bit" />
     </NC>
-    <coilSubroutine rung="0" row="11" column="16" cellsHeigh="7" iSortedIndex="3" SubroutineName="subTurnR.viofs" bIsEmbeddedSub="false">
-      <eLocal sAddress="M1PWMpin" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M1PWMpin" sIndex="" dtAddress="Bit" />
+    <coilSubroutine rung="0" row="11" column="16" cellsHeigh="3" iSortedIndex="3" SubroutineName="subTurnR.viofs" bIsEmbeddedSub="false">
+      <eLocal sAddress="Frequency" sIndex="" dtAddress="I32" />
+      <eSub sAddress="Frequency" sIndex="" dtAddress="I32" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M2PWMpin" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M2PWMpin" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="dirPin1" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M1speed" sIndex="" dtAddress="UI16" />
-      <eSub sAddress="M1speed" sIndex="" dtAddress="UI16" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M2speed" sIndex="" dtAddress="UI16" />
-      <eSub sAddress="M2speed" sIndex="" dtAddress="UI16" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M1a" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M1a" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M1b" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M1b" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M2a" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M2a" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M2b" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M2b" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
-      <eSub sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="pullPin1" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
     </coilSubroutine>
     <wireRouter rung="0" row="30" column="24" cellsHeigh="-1" iSortedIndex="-1" />
@@ -123,33 +102,15 @@
     <NO rung="0" row="35" column="10" cellsHeigh="-1" iSortedIndex="14">
       <eAddress1 sAddress="S4" sIndex="" dtAddress="Bit" />
     </NO>
-    <coilSubroutine rung="0" row="31" column="16" cellsHeigh="7" iSortedIndex="8" SubroutineName="subTurnL.viofs" bIsEmbeddedSub="false">
-      <eLocal sAddress="M1PWMpin" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M1PWMpin" sIndex="" dtAddress="Bit" />
+    <coilSubroutine rung="0" row="31" column="16" cellsHeigh="3" iSortedIndex="8" SubroutineName="subTurnL.viofs" bIsEmbeddedSub="false">
+      <eLocal sAddress="Frequency" sIndex="" dtAddress="I32" />
+      <eSub sAddress="Frequency" sIndex="" dtAddress="I32" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M2PWMpin" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M2PWMpin" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="dirPin2" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="dirPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M1speed" sIndex="" dtAddress="UI16" />
-      <eSub sAddress="M1speeed" sIndex="" dtAddress="UI16" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M2speed" sIndex="" dtAddress="UI16" />
-      <eSub sAddress="M2speeed" sIndex="" dtAddress="UI16" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M1a" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M1a" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M1b" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M1b" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M2a" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M2a" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="M2b" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="M2b" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
-      <eSub sAddress="PWMperiod" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="pullPin2" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
     </coilSubroutine>
     <NC rung="0" row="40" column="10" cellsHeigh="-1" iSortedIndex="20">
