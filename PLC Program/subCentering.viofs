@@ -136,7 +136,7 @@
     <FlowConn From="16" Yes="17" dirYesFrom="right" dirYesTo="left" />
     <FlowConn From="17" Yes="18" dirYesFrom="right" dirYesTo="left" No="19" dirNoFrom="down" dirNoTo="up" />
     <FlowConn From="18" Yes="7" dirYesFrom="right" dirYesTo="up" />
-    <FlowConn From="19" Yes="5" dirYesFrom="right" dirYesTo="down" />
+    <FlowConn From="19" Yes="8" dirYesFrom="right" dirYesTo="left" />
   </FlowConnections>
   <Wires />
   <Comments />
