@@ -102,7 +102,10 @@
     <NO rung="0" row="35" column="10" cellsHeigh="-1" iSortedIndex="14">
       <eAddress1 sAddress="S4" sIndex="" dtAddress="Bit" />
     </NO>
-    <coilSubroutine rung="0" row="31" column="16" cellsHeigh="3" iSortedIndex="8" SubroutineName="subTurnL.viofs" bIsEmbeddedSub="false">
+    <NC rung="0" row="40" column="10" cellsHeigh="-1" iSortedIndex="20">
+      <eAddress1 sAddress="S4" sIndex="" dtAddress="Bit" />
+    </NC>
+    <coilSubroutine rung="0" row="35" column="15" cellsHeigh="3" iSortedIndex="8" SubroutineName="subTurnL.viofs" bIsEmbeddedSub="false">
       <eLocal sAddress="Frequency" sIndex="" dtAddress="I32" />
       <eSub sAddress="Frequency" sIndex="" dtAddress="I32" />
       <bPassByRefOrFromEmbedded value="True" />
@@ -113,9 +116,6 @@
       <eSub sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
     </coilSubroutine>
-    <NC rung="0" row="40" column="10" cellsHeigh="-1" iSortedIndex="20">
-      <eAddress1 sAddress="S4" sIndex="" dtAddress="Bit" />
-    </NC>
   </Cells>
   <FlowConnections>
     <FlowConn From="0" Yes="1" dirYesFrom="down" dirYesTo="up" />
@@ -132,11 +132,11 @@
     <FlowConn From="12" Yes="5" dirYesFrom="right" dirYesTo="up" />
     <FlowConn From="13" Yes="14" dirYesFrom="right" dirYesTo="left" />
     <FlowConn From="14" Yes="15" dirYesFrom="right" dirYesTo="left" No="16" dirNoFrom="down" dirNoTo="up" />
-    <FlowConn From="15" Yes="18" dirYesFrom="right" dirYesTo="left" No="17" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="15" Yes="19" dirYesFrom="right" dirYesTo="left" No="17" dirNoFrom="down" dirNoTo="up" />
     <FlowConn From="16" Yes="17" dirYesFrom="right" dirYesTo="left" />
-    <FlowConn From="17" Yes="18" dirYesFrom="right" dirYesTo="left" No="19" dirNoFrom="down" dirNoTo="up" />
-    <FlowConn From="18" Yes="7" dirYesFrom="right" dirYesTo="up" />
-    <FlowConn From="19" Yes="8" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="17" Yes="19" dirYesFrom="right" dirYesTo="left" No="18" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="18" Yes="8" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="19" Yes="7" dirYesFrom="right" dirYesTo="up" />
   </FlowConnections>
   <Wires />
   <Comments />
