@@ -51,11 +51,11 @@
       <eSub sAddress="Frequency" sIndex="" dtAddress="I32" />
       <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="pullPin1" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="PullPin1" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
+      <eSub sAddress="pullPin1" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
       <eLocal sAddress="pullPin2" sIndex="" dtAddress="Bit" />
-      <eSub sAddress="PullPin2" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="True" />
+      <eSub sAddress="pullPin2" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
       <eLocal sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />

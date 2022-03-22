@@ -7,8 +7,8 @@
     <Connection sKey="Pulse" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
     <Connection sKey="Frequency" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
     <Connection sKey="myTimer" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
-    <Connection sKey="PullPin1" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="PullPin2" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="pullPin1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="pullPin2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="dirPin1" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="dirPin2" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="Delays" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="register" />
@@ -18,8 +18,8 @@
   <Modbus />
   <SubroutineInputs cellsHeigh="3">
     <Input sAddress="Frequency" sIndex="" dtAddress="I32" />
-    <Input sAddress="PullPin1" sIndex="" dtAddress="Bit" />
-    <Input sAddress="PullPin2" sIndex="" dtAddress="Bit" />
+    <Input sAddress="pullPin1" sIndex="" dtAddress="Bit" />
+    <Input sAddress="pullPin2" sIndex="" dtAddress="Bit" />
     <Input sAddress="dirPin1" sIndex="" dtAddress="Bit" />
     <Input sAddress="dirPin2" sIndex="" dtAddress="Bit" />
     <Input sAddress="velFactor" sIndex="" dtAddress="Float" />
@@ -55,16 +55,16 @@
       <eAddress2 sAddress="Pulse" sIndex="" dtAddress="I32" />
     </Equal>
     <coilSet rung="0" row="30" column="8" cellsHeigh="-1" iSortedIndex="7">
-      <eAddress1 sAddress="PullPin1" sIndex="" dtAddress="Bit" />
+      <eAddress1 sAddress="pullPin1" sIndex="" dtAddress="Bit" />
     </coilSet>
     <coilSet rung="0" row="30" column="12" cellsHeigh="-1" iSortedIndex="8">
-      <eAddress1 sAddress="PullPin2" sIndex="" dtAddress="Bit" />
+      <eAddress1 sAddress="pullPin2" sIndex="" dtAddress="Bit" />
     </coilSet>
     <coilReset rung="0" row="35" column="8" cellsHeigh="-1" iSortedIndex="14">
-      <eAddress1 sAddress="PullPin1" sIndex="" dtAddress="Bit" />
+      <eAddress1 sAddress="pullPin1" sIndex="" dtAddress="Bit" />
     </coilReset>
     <coilReset rung="0" row="35" column="12" cellsHeigh="-1" iSortedIndex="15">
-      <eAddress1 sAddress="PullPin2" sIndex="" dtAddress="Bit" />
+      <eAddress1 sAddress="pullPin2" sIndex="" dtAddress="Bit" />
     </coilReset>
     <coilCopy rung="0" row="30" column="20" cellsHeigh="3" iSortedIndex="10" CopyType="standard">
       <eKeySource sAddress="1" sIndex="" dtAddress="I32" />

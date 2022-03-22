@@ -20,13 +20,13 @@
     <Connection sKey="InBitC4" iPort="2" iPin="4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
     <Connection sKey="S4" iPort="2" iPin="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
     <Connection sKey="S5" iPort="2" iPin="6" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
-    <Connection sKey="OutBitD1" iPort="3" iPin="1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
-    <Connection sKey="OutBitD2" iPort="3" iPin="2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
-    <Connection sKey="OutBitD3" iPort="3" iPin="3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
-    <Connection sKey="OutBitD4" iPort="3" iPin="4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="pullPin1" iPort="3" iPin="1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="dirPin1" iPort="3" iPin="2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="pullPin2" iPort="3" iPin="3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="dirPin2" iPort="3" iPin="4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
     <Connection sKey="OutBitD5" iPort="3" iPin="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
     <Connection sKey="OutBitD6" iPort="3" iPin="6" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
-    <Connection sKey="CarState" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="carState" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
     <Connection sKey="Frequency" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
     <Connection sKey="velFactor" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="register" />
   </Connections>
@@ -38,15 +38,15 @@
       <eKeySource sAddress="1" sIndex="" dtAddress="I32" />
       <eKeySource sAddress="250" sIndex="" dtAddress="I32" />
       <eKeySource sAddress="1.5" sIndex="" dtAddress="Float" />
-      <eKeyDestination sAddress="CarState" sIndex="" dtAddress="I32" />
+      <eKeyDestination sAddress="carState" sIndex="" dtAddress="I32" />
       <eKeyDestination sAddress="Frequency" sIndex="" dtAddress="I32" />
       <eKeyDestination sAddress="velFactor" sIndex="" dtAddress="Float" />
     </coilCopy>
     <Equal rung="0" row="16" column="3" cellsHeigh="-1" iSortedIndex="1">
       <eAddress1 sAddress="0" sIndex="" dtAddress="UI8" />
-      <eAddress2 sAddress="CarState" sIndex="" dtAddress="I32" />
+      <eAddress2 sAddress="carState" sIndex="" dtAddress="I32" />
     </Equal>
-    <flowComment rung="0" row="5" column="10" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="outpinD1= ENA(PWM M1)&#xA;outpinD2= IN1(M1)&#xA;outpinD3= IN2(M1)&#xA;outpinD4= IN3(M2)&#xA;outpinD5= IN4(M2)&#xA;outpinD6= ENB(PWM M2)">
+    <flowComment rung="0" row="5" column="10" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="velFactor = velocity factor&#xD;&#xA;" sText="velFactor = velocity factor&#xA;">
       <bDown value="False" />
       <bLeft value="False" />
       <bLeftDown value="False" />
@@ -62,7 +62,7 @@
     </NC>
     <Equal rung="0" row="22" column="3" cellsHeigh="-1" iSortedIndex="6">
       <eAddress1 sAddress="1" sIndex="" dtAddress="UI8" />
-      <eAddress2 sAddress="CarState" sIndex="" dtAddress="I32" />
+      <eAddress2 sAddress="carState" sIndex="" dtAddress="I32" />
     </Equal>
     <NC rung="0" row="22" column="12" cellsHeigh="-1" iSortedIndex="10">
       <eAddress1 sAddress="S5" sIndex="" dtAddress="Bit" />
@@ -80,16 +80,16 @@
       <eLocal sAddress="Frequency" sIndex="" dtAddress="I32" />
       <eSub sAddress="Frequency" sIndex="" dtAddress="I32" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD1" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD3" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD2" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD4" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="dirPin2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="velFactor" sIndex="" dtAddress="Float" />
@@ -102,31 +102,31 @@
     <wireRouter rung="0" row="46" column="24" cellsHeigh="-1" iSortedIndex="-1" />
     <wireRouter rung="0" row="46" column="6" cellsHeigh="-1" iSortedIndex="-1" />
     <coilSet rung="0" row="16" column="8" cellsHeigh="-1" iSortedIndex="2">
-      <eAddress1 sAddress="OutBitD2" sIndex="" dtAddress="Bit" />
+      <eAddress1 sAddress="dirPin1" sIndex="" dtAddress="Bit" />
     </coilSet>
     <coilSet rung="0" row="16" column="12" cellsHeigh="-1" iSortedIndex="3">
-      <eAddress1 sAddress="OutBitD4" sIndex="" dtAddress="Bit" />
+      <eAddress1 sAddress="dirPin2" sIndex="" dtAddress="Bit" />
     </coilSet>
     <coilSet rung="0" row="16" column="16" cellsHeigh="-1" iSortedIndex="4">
-      <eAddress1 sAddress="OutBitD1" sIndex="" dtAddress="Bit" />
+      <eAddress1 sAddress="pullPin1" sIndex="" dtAddress="Bit" />
     </coilSet>
     <coilSet rung="0" row="16" column="20" cellsHeigh="-1" iSortedIndex="5">
-      <eAddress1 sAddress="OutBitD3" sIndex="" dtAddress="Bit" />
+      <eAddress1 sAddress="pullPin2" sIndex="" dtAddress="Bit" />
     </coilSet>
     <coilSubroutine rung="0" row="36" column="11" cellsHeigh="5" iSortedIndex="12" SubroutineName="subTurnLacute.viofs" bIsEmbeddedSub="false">
       <eLocal sAddress="Frequency" sIndex="" dtAddress="I32" />
       <eSub sAddress="Frequency" sIndex="" dtAddress="I32" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD2" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD4" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="dirPin2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD1" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD3" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="velFactor" sIndex="" dtAddress="Float" />
@@ -134,16 +134,16 @@
       <bPassByRefOrFromEmbedded value="True" />
     </coilSubroutine>
     <coilSubroutine rung="0" row="29" column="17" cellsHeigh="5" iSortedIndex="11" SubroutineName="subTurnRacute.viofs" bIsEmbeddedSub="false">
-      <eLocal sAddress="OutBitD1" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD3" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD2" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
-      <eLocal sAddress="OutBitD4" sIndex="" dtAddress="Bit" />
+      <eLocal sAddress="dirPin2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin2" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="Frequency" sIndex="" dtAddress="I32" />
