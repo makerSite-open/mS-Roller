@@ -6,15 +6,6 @@
   <Connections>
     <Connection sKey="S2" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="S3" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="M1PWMpin" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="M2PWMpin" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="M1speed" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
-    <Connection sKey="M2speed" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
-    <Connection sKey="M1a" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="M1b" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="M2a" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="M2b" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
-    <Connection sKey="PWMperiod" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
     <Connection sKey="S4" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
     <Connection sKey="Frequency" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
     <Connection sKey="pullPin1" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
@@ -69,10 +60,10 @@
       <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin1" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="False" />
+      <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin2" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="False" />
+      <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />

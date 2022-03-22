@@ -52,10 +52,10 @@
       <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="pullPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin1" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="False" />
+      <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="pullPin2" sIndex="" dtAddress="Bit" />
       <eSub sAddress="pullPin2" sIndex="" dtAddress="Bit" />
-      <bPassByRefOrFromEmbedded value="False" />
+      <bPassByRefOrFromEmbedded value="True" />
       <eLocal sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <eSub sAddress="dirPin1" sIndex="" dtAddress="Bit" />
       <bPassByRefOrFromEmbedded value="True" />

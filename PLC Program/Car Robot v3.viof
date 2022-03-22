@@ -46,7 +46,7 @@
       <eAddress1 sAddress="0" sIndex="" dtAddress="UI8" />
       <eAddress2 sAddress="carState" sIndex="" dtAddress="I32" />
     </Equal>
-    <flowComment rung="0" row="5" column="10" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="velFactor = velocity factor&#xD;&#xA;" sText="velFactor = velocity factor&#xA;">
+    <flowComment rung="0" row="5" column="10" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="velFactor = velocity factor&#xA;">
       <bDown value="False" />
       <bLeft value="False" />
       <bLeftDown value="False" />
